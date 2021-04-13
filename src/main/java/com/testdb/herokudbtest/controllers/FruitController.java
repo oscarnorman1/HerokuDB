@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@CrossOrigin(origins = "https://oscarbalidb.herokuapp.com/")
 @RequestMapping(path = "/fruit")
 public class FruitController {
 
@@ -22,7 +23,6 @@ public class FruitController {
         return "Frukt adderad!";
     }
 
-    @CrossOrigin(origins = "https://oscarbalidb.herokuapp.com/fruit/")
     @GetMapping(path = "/allFruits")
     public @ResponseBody Iterable<Fruit> getAllFruits() {
         return fruitRepository.findAll();
