@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@CrossOrigin(origins = "https://oscarbalidb.herokuapp.com/")
+@CrossOrigin
 @RequestMapping(path = "/fruit")
 public class FruitController {
 
